@@ -6,12 +6,16 @@ public class Player {
     private String lastName;
     private Team team;
 
-    public Player(String firstName, String lastName){
+    public Player(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public void setTeam(Team team){
+    public void setTeam(Team team) {
         this.team = team;
+    }
+
+    public String toString() {
+        return team == null ? firstName + ";" + lastName : firstName + ";" + lastName + ";" + team.getName();
     }
 }

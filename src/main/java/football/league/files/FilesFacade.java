@@ -8,15 +8,15 @@ public class FilesFacade {
     private FilesReader fileReader;
 //    private CSVFileWriter fileWriter;
 
-    public FilesFacade(){
+    public FilesFacade() {
         fileReader = new FilesReader();
 //        fileWriter = new CSVFileWriter();
     }
 
-    public List<String> readFile(String path){
-        try{
+    public List<String> readFile(String path) {
+        try {
             return fileReader.read(path);
-        } catch(IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return null;

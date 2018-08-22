@@ -5,7 +5,7 @@ import java.nio.file.Paths;
 
 public class AbstractFileReader {
 
-    private static String PATH = "C:\\FootballManager\\storage";
+    private static String PATH = "C:\\Users\\miczu\\IdeaProjects\\footballManager\\FootballManager\\storage";
 
     protected File getFile(String path) {
         if (path == null) {
