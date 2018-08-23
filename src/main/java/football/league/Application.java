@@ -4,10 +4,7 @@ import football.league.files.FilesFacade;
 import football.league.model.Player;
 import football.league.model.Team;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
@@ -18,11 +15,12 @@ public class Application {
         Set<Team> teams = new HashSet<>();
         Set<Player> players = new TreeSet<>();
 
-        for (String line : teamsFromFile) {
+        for(String line : teamsFromFile){
             teams.add(new Team(line));
         }
-        for (Team t : teams) {
+        for(Team t : teams){
             System.out.println(t.getName());
+//            System.out.println(teams.indexOf(t));
         }
 
         for (String line : playersFromFile) {
@@ -38,5 +36,6 @@ public class Application {
             t.playersSet().stream()
                     .forEach(p -> System.out.println(p.toString()));
         }
+
     }
 }
